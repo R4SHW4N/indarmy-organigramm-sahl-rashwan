@@ -45,6 +45,8 @@ const client = new Client({
 });
 ----- (Speichern: Strg + O → Enter → Strg + X.)
 
+# In terminal -> export DB_PASS="DeinPasswort"
+
 ### 4. Organigramm generieren
 # Führe das Skript aus:
 node army.js
