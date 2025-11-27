@@ -8,11 +8,18 @@ import sharp from "sharp";            // Bildverarbeitung (SVG → PNG)
 // --- Datenbankverbindung herstellen ---
 const client = new Client({
   user: "postgres",                   // Datenbank-Benutzername
-  password: "Jasa.7",                 // Passwort 
+  password: process.env.DB_PASS,      // Passwort aus Umgebungsvariable
   host: "localhost",                  // Host-Adresse
   database: "indarmydb",              // Datenbankname
 });
+
+if (!process.env.DB_PASS) {
+  console.error("❌ Bitte setze die Umgebungsvariable DB_PASS, z.B.: export DB_PASS='DeinPasswort'");
+  process.exit(1);
+}
+
 await client.connect();               // Verbindung zur Datenbank aufbauen
+
 
 // --- Daten aus der Datenbank abfragen ---
 const { rows } = await client.query("SELECT id, name, boss_id FROM indiarmy");
