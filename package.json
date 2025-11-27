@@ -1,0 +1,19 @@
+{
+  "name": "ind-army-organigramm-js-rashwan-sahl",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "- `schema.sql` – Datenbanktabellen + Beispielhierarchie\r - `army.js` – Node.js-Quellcode (greift auf PostgreSQL zu, erzeugt SVG + PNG)\r - `output/army.svg` und `output/army.png` – Ausgabe\r - `README.md` – diese Anleitung",
+  "main": "army.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "d3": "^7.9.0",
+    "jsdom": "^27.2.0",
+    "pg": "^8.16.3",
+    "sharp": "^0.34.5"
+  }
+}
